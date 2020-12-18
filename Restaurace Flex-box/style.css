@@ -1,0 +1,173 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { height: 100vh; box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100%;
+    color: #fff;
+}
+
+h2 {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+@media (max-width: 480px) {
+  
+}
+
+@media screen and (min-width: 480px) and (max-width: 800px){
+  .doporucujeme{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .sloupec{
+    flex-basis: 50%;
+  }
+  .hlavni-recept{
+    flex-basis: 100%;
+    border-bottom: 1px solid #fff;
+  }
+  .hlavni-recept > h2 {
+    font: 800 36px 'Raleway';
+  }
+  .recept > h2 {
+    font: 800 22px 'Raleway';
+  }
+
+  .sloupec:nth-child(2){
+    border-right: 1px solid #fff ;
+  }
+  .recept:first-child{
+    border-bottom: 1px solid #fff ;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .doporucujeme{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .doporucujeme > *{
+    flex: 1;
+    
+  }
+  .hlavni-recept{
+    height: 400px;
+  }
+  /* .recept{
+    height: 200px;
+  } */
+  .sloupec{
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #fff;
+  }
+  .recept2, .recept4{
+    border-bottom: 1px solid #fff;
+  }
+  .sloupec > div{
+    flex: 1;
+  }
+}
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+/* tvoje styly sem */
+
+body {
+  color: white;
+}
+
+.recept {
+  min-height: 90px;
+}
+
+.hlavni-recept {
+  min-height: 200px;
+  background-image: linear-gradient(#0005, #0005), url("./images/burger.jpg");
+}
+
+.hlavni-recept > h2 {
+  font: 800 28px 'Raleway';
+}
+
+.hlavni-recept > .recept-meta {
+  font: 600 14px 'Raleway';
+}
+
+.recept > .recept-meta {
+  font: 400 12px 'Raleway';
+}
+
+.recept > h2 {
+  font: 800 18px 'Raleway';
+}
+
+.recept, .hlavni-recept {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  justify-content: space-between;
+}
+
+.recept2 {
+  background: linear-gradient(#0005, #0005), url("./images/sushi.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.recept3 {
+  background-image:linear-gradient( #0005, #0005), url("./images/rajcata.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.recept4 {
+  background-image:linear-gradient( #0005, #0005), url("./images/kure.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.recept5 {
+  background-image:linear-gradient(#0005, #0005), url("./images/grilovani.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.recept-meta {
+  display: flex;
+  justify-content: space-between;
+}
